@@ -1,5 +1,8 @@
+import sys
 import dpkt
 import socket
+
+#Tested for Python 3
 
 def getARP(pcapFileName):
 
@@ -37,4 +40,9 @@ def main(pcapFileName):
     printPackets(arpPackets)
 
 if __name__ == '__main__':
-    main()
+    print(sys.version)
+    if len(sys.argv) == 2:
+        main(sys.argv[1])
+    else:
+        print('usage: analysis_pcap_arp <pcapFileName>')
+        exit()
