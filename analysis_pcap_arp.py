@@ -20,7 +20,7 @@ def printPackets(arpPackets):
     i = 0
     for ts, pkt in arpPackets:
         print('Time Stamp:{}-----------------'.format(ts))
-        print('Hardware type:{}'.format(str(pkt[0:2])))
+        print('Hardware type:{}'.format(pkt[0:2]))
         print('Protocol type:{}'.format(pkt[2:4]))
         print('Hardware size:{}'.format(pkt[4]))
         print('Protocol size:{}'.format(pkt[5]))
