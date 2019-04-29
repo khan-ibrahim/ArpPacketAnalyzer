@@ -5,7 +5,7 @@ import socket
 #Tested for Python 3
 
 def getARP(pcapFileName):
-
+    #Returns [timestamp, ARP packet] list. ARP packet is in raw byte form.
     f = open(pcapFileName, 'rb')
     pcap = dpkt.pcap.Reader(f)
 
